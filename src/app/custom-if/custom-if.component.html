@@ -1,0 +1,32 @@
+<div class="container box-shadow">
+    <div class="row w-100">
+        <div class="col-12 w-100 d-flex justify-content-center">
+            <h3>Custom *ngIf</h3>
+        </div>
+    </div>
+    <hr/>
+    <div class="row p-1">
+        <div class="col-6 d-flex align-items-center">
+            <input 
+            type="checkbox"
+            #checkboxValue
+            id="checkbox"
+            (change)="onCheckboxChanged(checkboxValue)"
+            >
+            <label for="checkbox">show/hide</label>
+        </div>
+    </div>
+    
+    
+    <!--Down Below its structural custom directive  -->
+
+    <div *appCustomShowHideDirective="show" class="col-6 shadow-color-blue">Custom If deirective content desplayed</div>
+
+    <!-- this is how " * " working it will creat template over it it make just disappear but
+        it will strill remain there
+    -->
+    <!-- <ng-template ngIf>
+        <div [appCustomShowHideDirective]="show" class="col-6 shadow-color-blue">Custom If deirective content desplayed</div>
+    </ng-template> -->
+
+</div>
